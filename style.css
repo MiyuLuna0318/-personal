@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+
 /* eric/css/reset/ */
 html,
 body,
@@ -112,6 +114,7 @@ ol,
 ul {
     list-style: none;
     padding-left: 0;
+    text-decoration: none;
 }
 
 blockquote,
@@ -142,9 +145,27 @@ body {
     padding: 0;
 }
 
+/* ________________________________________ */
+/* 文字設定 */
+/* 顏色設定 */
+:root {
+    /* 主色調 */
+    --white: #fff;
+    --white-rgba7: rgba(255, 255, 255, 0.7);
+    --blue: #284C77;
+    --bluePinck: linear-gradient(to left bottom, #C27FCF 20%, #0368FF 100%);
+
+    /* 陰影box-shadow */
+    /* btn 按鈕 */
+    --shadow-black: rgba(0, 0, 0, 0.3);
+    /* title 文字 */
+    --shadow-blue: rgb(40, 76, 119, 0.8);
+}
 
 /* __________________________________________________________________________________ */
 /* hearder選單 */
+
+
 /* __________________________________________________________________________________ */
 /* index首頁 */
 /* __________________________________________________________________________________ */
@@ -154,29 +175,36 @@ body {
 /* Donate捐款頁面-第一頁:選擇 */
 /* 背景 */
 #donate {
-    font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #8CCDE3, #DF9AA4);
+}
+
+#donate .donate-box {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    color: var(--white);
+
+    width: 100%;
+    max-width: 1440px;
+
     margin: 0 auto;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff;
-    width: 100%;
+    overflow: hidden;
 }
+
 
 /* 左手邊 */
 .title-L {
     display: flex;
     flex-flow: column;
-    margin: 0 50px;
+    margin: 150px 50px;
+    line-height: 1.5;
 }
 
 .title-L .header {
     text-align: center;
     font-size: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .title-L .header-text {
@@ -192,20 +220,23 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 30px;
-    margin: 0 50px;
-    width: 90%;
-    max-width: 1000px;
+    margin: 100px 50px;
+    width: 100%;
+    max-height: 750px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .header {
     font-size: 32px;
     margin-bottom: 10px;
     font-weight: bold;
+    letter-spacing: 1rem;
+    text-shadow: 3px 3px var(--shadow-blue);
 }
 
 /* 捐款方式 */
+
 .radio-group {
     display: flex;
     justify-content: space-between;
@@ -214,28 +245,37 @@ body {
 
 .radio-group button {
     align-items: center;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--white-rgba7);
     padding: 25px 20px;
     margin: 0 10px 0 0;
     border-radius: 20px;
     cursor: pointer;
     border: none;
     width: 100%;
-    box-shadow: 3px 3px #65202D;
+    box-shadow: 3px 3px var(--shadow-black);
+    border: 3px solid transparent;
+
     color: #666;
     font-size: 20px;
+    transition: all 0.4s;
 }
 
 .radio-group button:hover {
-    background: #65202D;
-    color: #fff;
+    background: var(--blue);
+    color: var(--white);
     box-shadow: none;
+    border: 3px solid transparent;
+
 }
 
 .radio-group button.clicked {
-    background: #65202D;
-    color: #fff;
-    box-shadow: none;
+    background: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    box-shadow: inset 3px 3px var(--shadow-black);
+    border: 3px solid var(--shadow-black);
+    transition: none;
+
 }
 
 
@@ -256,76 +296,128 @@ body {
 .form-group .box {
     display: flex;
     flex-flow: column;
+    justify-content: space-around;
 }
 
 .form-group .box button {
-    background: rgba(255, 255, 255, 0.3);
-    padding: 10px 20px;
-    margin: 10px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.65)0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.65) 100%);
+    padding: 25px 20px;
     border-radius: 99px;
     cursor: pointer;
     border: none;
     width: 100%;
-    box-shadow: 3px 3px #65202D;
+    box-shadow: 3px 3px var(--shadow-black);
     color: #666;
+    transition: all 0.4s;
+    margin: 10px 0;
+
 }
 
 .form-group .box button:hover {
-    background: #65202D;
-    color: #fff;
+    background: var(--blue);
+    color: var(--white);
     box-shadow: none;
 }
 
+/* .form-group .box button.clicked {
+    background: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    box-shadow: inset 3px 3px var(--shadow-black);
+    border: 3px solid var(--shadow-black);
+    transition: none;
+} */
 
 .form-group .box button .text-SB {
     display: flex;
     justify-content: space-between;
+    align-items: end;
+
 }
 
 .form-group .box button .text-SB .S {
     display: flex;
-    align-items: center;
+    align-items: end;
+
 }
 
 .form-group .box button .text-SB .B {
     margin-right: 80px;
 }
 
+.form-group .box button .text-SB .S small {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
 .form-group .box button .text-SB .S h2 {
     margin: 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: .2rem;
+}
+
+.form-group .box button .text-SB .B h3 {
+    font-size: 18px;
+    font-weight: bold;
+
 }
 
 /* 捐款金額 */
-.form-group-2 {
+#select-money .select,
+#select-money .form-group-2 {
     color: #666;
     font-size: 20px;
-    float: left;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     margin: 0 auto;
     display: flex;
-
+    align-items: center;
 }
 
-.form-group-2 input[type="text"] {
+#select-money .form-group-2 input[type="text"],
+#select-money .select select {
     margin-right: 5px;
     border: none;
     border-radius: 99px;
     background: rgba(255, 255, 255, 0.8);
-    padding: 0 20px;
+    padding: 10px 20px;
     color: #666;
     margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    border: 2px solid transparent;
+
 }
 
+/* 細部設定 */
+#select-money .form-group-2 input[type="text"]:focus,
+#select-money .select select:focus {
+    border: 2px solid var(--shadow-blue);
+    outline: none;
+}
 
+/* 幣別選擇:下拉選單 */
+#select-money .select select {
+    appearance: none;
+    /* 移除預設 */
+    padding-right: 40px;
+    background-image: url(./img/Donate/optgroup-arrow.svg);
+    background-size: 20%;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+}
 
-a {
+/* 下一步按鈕 */
+.btn-next {
     float: right;
     margin: 30px 0 0 0;
     padding: 15px 30px;
-    background: linear-gradient(to left bottom, #C27FCF 20%, #0368FF 100%);
-    color: #fff;
+    background: var(--bluePinck);
+    color: var(--white);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -351,4 +443,65 @@ a {
 
 /* __________________________________________________________________________________ */
 /* footer頁尾 */
+footer {
+    background: linear-gradient(hsla(349, 57%, 52%, 0.35) 0%, rgba(170, 54, 75, 0.8) 45%, #65202D 100%);
+    width: 100%;
+    margin: auto;
+}
+
+footer #footer-box {
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    height: 280px;
+}
+
+footer h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+
+}
+
+footer p {
+    color: white;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.5;
+    letter-spacing: .25rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+footer p .maptext {
+    margin-left: 50px;
+    color: white;
+}
+
+footer p img {
+    margin-right: 20px;
+
+}
+
+footer #footer-contant {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 75px;
+}
+
+footer #footer-connect {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+
+    padding: 0 75px;
+}
+
+
 /* __________________________________________________________________________________ */
