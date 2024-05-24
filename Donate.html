@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>守護海洋</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div id="donate">
+        <div class="background-image"></div>
+        <div class="title-L">
+            <div class="header">一起守護海洋<br>為未來貢獻</div>
+            <div class="header-text">
+                　　無論您捐款的數額是大是小，每一分都將直接投入到我們的海洋保護項目中，為我們的海洋帶來真正的改變。讓我們攜手保護這片蔚藍的海洋，為我們的子孫後代留下一個更美好的未來。
+            </div>
+        </div>
+        <div class="container">
+
+            <form>
+                <div class="box">
+                    <div class="subheader">選擇捐款方式</div>
+                    <div class="radio-group">
+                        <button type="button">每月捐款</button>
+                        <button type="button">單筆捐款</button>
+                        <button type="button">其他方式</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="subheader">選擇捐款方式</div>
+                    <div class="box">
+                        <button type="button">
+                            <div class="text-SB">
+                                <div class="S">
+                                    <small>幣別</small>
+                                    <h2>付款金額</h2>
+                                </div>
+                                <div class="B">
+                                    <h3>一些小文案</h3>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button">
+                            <div class="text-SB">
+                                <div class="S">
+                                    <small>幣別</small>
+                                    <h2>付款金額</h2>
+                                </div>
+                                <div class="B">
+                                    <h3>一些小文案</h3>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button">
+                            <div class="text-SB">
+                                <div class="S">
+                                    <small>幣別</small>
+                                    <h2>付款金額</h2>
+                                </div>
+                                <div class="B">
+                                    <h3>一些小文案</h3>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group-2">
+                    <label for="name">自訂金額：</label>
+                    <input type="text" id="name">
+                </div>
+
+                <a href="#">下一步</a>
+            </form>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.radio-group button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const activeButton = document.querySelector('.radio-group button.clicked');
+                    if (activeButton) {
+                        activeButton.classList.remove('clicked');
+                    }
+                    button.classList.add('clicked');
+                });
+            });
+        });
+    </script>
+</body>
+
+
+</html>

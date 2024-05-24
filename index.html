@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate選擇捐款金額</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">活動</a></li>
+                <li><a href="#">捐款</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>保護海洋的朋友們 - 只要您的一份支持</h1>
+            <button class="btn-primary">立即捐款</button>
+        </div>
+        <div class="whale-image"></div>
+    </header>
+    
+    <section class="section">
+        <div class="content">
+            <h2>保護鯨豚家園</h2>
+            <p>了解更多關於保護鯨豚的資訊</p>
+        </div>
+    </section>
+
+    <section class="section info-section">
+        <h2>捐款選項</h2>
+        <div class="donation-options">
+            <div class="option">
+                <img src="image1.jpg" alt="Option 1">
+                <button>選擇捐款</button>
+            </div>
+            <div class="option">
+                <img src="image2.jpg" alt="Option 2">
+                <button>選擇捐款</button>
+            </div>
+            <div class="option">
+                <img src="image3.jpg" alt="Option 3">
+                <button>選擇捐款</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section donation-section">
+        <h2>選擇捐款金額</h2>
+        <div class="form-group">
+            <label for="donation-amount">金額</label>
+            <select id="donation-amount">
+                <option value="small">小額</option>
+                <option value="medium">中額</option>
+                <option value="large">大額</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="donation-type">捐款方式</label>
+            <select id="donation-type">
+                <option value="monthly">月捐</option>
+                <option value="one-time">單次捐款</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+        </div>
+        <button class="btn-primary">下一步</button>
+    </section>
+
+    <footer class="footer">
+        <p>版權所有 © 2024 守護海洋組織</p>
+    </footer>
+</body>
+</html>
