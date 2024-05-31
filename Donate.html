@@ -10,13 +10,26 @@
 
 <body>
     <header>
-
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="./groups.html" class="text-18w-Family">環保團體</a></li>
+                <li><a href="./activities.html" class="text-18w-Family">活動公告</a></li>
+                <li><a href="./video-news.html" class="text-18w-Family">相關文章與新聞</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-primary">訂閱</button>
+                <button class="btn-primary"><a href="./Donate.html">捐款</a></button>
+                <a href="./index.html" class="nav-icon"><img src="./img/menuhearder/icon-home.svg" alt="Home"></a>
+                <a href="./video-news.html" class="nav-icon"><img src="./img/menuhearder/icon-video.svg" alt="Video"></a>
+            </div>
+        </nav>
     </header>
 
     <div id="donate">
+        <img class="right-bg" src="./img/Lower left ocean map.png" alt="">
         <div class="donate-box">
             <div class="title-L">
-                <div class="header">一起守護海洋<br>為未來貢獻</div>
+                <div class="header Big-Text-NoFamily">一起守護海洋<br>為未來貢獻</div>
                 <div class="header-text">
                     　　無論您捐款的數額是大是小，每一分都將直接投入到我們的海洋保護項目中，為我們的海洋帶來真正的改變。讓我們攜手保護這片蔚藍的海洋，為我們的子孫後代留下一個更美好的未來。
                 </div>
@@ -24,15 +37,15 @@
             <div class="container">
                 <form>
                     <div class="box">
-                        <div class="subheader">選擇捐款方式</div>
-                        <div class="radio-group">
-                            <button type="button">每月捐款</button>
-                            <button type="button">單筆捐款</button>
-                            <button type="button">其他方式</button>
+                        <div class="subheader text-206b-Family">選擇捐款方式</div>
+                        <div class="radio-group ">
+                            <button class="text-206b-Family" type="button">每月捐款</button>
+                            <button class="text-206b-Family" type="button">單筆捐款</button>
+                            <button class="text-206b-Family" type="button">其他方式</button>
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="subheader">選擇捐款方式</div>
+                        <div class="subheader text-206b-Family">選擇金額方式</div>
                         <div class="box">
                             <button type="button">
                                 <div class="text-SB">
@@ -70,9 +83,9 @@
                         </div>
                     </div>
                     <div id="select-money">
-                        <div class="select">
+                        <div class="select text-206b-Family">
                             <label for="money">選擇幣別：</label>
-                            <select>
+                            <select class="text-206b-Family">
                                 <option value="台幣">台幣</option>
                                 <option value="美金">美金</option>
                                 <option value="日幣">日幣</option>
@@ -80,11 +93,15 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <div class="form-group-2">
+                        <div class="form-group-2 text-206b-Family">
                             <label for="name">自訂金額：</label>
                             <input type="text" id="name">
                         </div>
-                        <a class="btn-next" href="#">下一步</a>
+                        <a class="btn-next text-18w-Family" href="#">下一步</a>
+                    </div>
+                    <div id="newFormContent">
+                        <h2>新的表单内容</h2>
+                        <p>这是新的表单内容，覆盖原本的内容。</p>
                     </div>
                 </form>
             </div>
@@ -92,7 +109,26 @@
     </div>
 
     <footer>
+        <div id="footer-box">
+            <div id="footer-contant">
+                <h2 class="text-20wb-Family">關於我們</h2>
+                <p class="text-16wf-Family">
+                    面臨著保護地球的重大責任。作為地球上生命的一部分，海洋扮演著至關重要的角色。然而，它們受到塑料污染、氣候變化、過度捕撈等問題的威脅，加入我們，成為海洋保護的一份子，讓我們共同守護著這片藍色的大海。
+                </p>
 
+            </div>
+            <div id="footer-connect">
+                <h2 class="text-20wb-Family">與我們聯繫</h2>
+                <div class="text-16wf-Family">
+                    <p><img src="./img/footer/mail.svg" alt="電子信箱、Email">MarineEcological_Conservation@gmail.com </p>
+                    <p><img src="./img/footer/addr.svg" alt="地址、Addr">100台北市中正區濟南路一段321號 <a class="maptext"
+                            href="">Google-Map</a></p>
+                    <p><img src="./img/footer/phone.svg" alt="聯絡電話、phoneNumber">02-33222777</p>
+                </div>
+            </div>
+            <img class="left-pp" src="./img/footer/Bubbles.svg" alt="">
+            <img class="right-pp" src="./img/footer/Bubbles.svg" alt="">
+        </div>
     </footer>
 
     <!-- 按鈕被點擊 -->
@@ -109,6 +145,15 @@
                 });
             });
         });
+
+        document.querySelector('.btn-next').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('initialBox').classList.add('hidden');
+            document.getElementById('newFormContent').classList.remove('hidden');
+        });
+
+
+
     </script>
 </body>
 

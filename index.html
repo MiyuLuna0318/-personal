@@ -6,71 +6,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人作業｜提倡環保◇保護海洋｜</title>
     <link rel="stylesheet" href="./style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <header></header>
+    <!-- 選單 -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="./groups.html" class="text-18w-Family">環保團體</a></li>
+                <li><a href="./activities.html" class="text-18w-Family">活動公告</a></li>
+                <li><a href="./video-news.html" class="text-18w-Family">相關文章與新聞</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-primary">訂閱</button>
+                <button class="btn-primary"><a href="./Donate.html">捐款</a></button>
+                <a href="./index.html" class="nav-icon"><img src="./img/menuhearder/icon-home.svg" alt="Home"></a>
+                <a href="./video-news.html" class="nav-icon"><img src="./img/menuhearder/icon-video.svg"
+                        alt="Video"></a>
+            </div>
+        </nav>
+    </header>
 
-    <section class="section">
-        <div class="header-content">
-            <h1>保護海洋的朋友們 - 只要您的一份支持</h1>
-            <button class="btn-primary">立即捐款</button>
+    <!-- 首頁 -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="Big-Text-Family"><span class="left">保護我們的朋友</span><br><span class="right">不破壞他們的家</span></h1>
+                <p class="text-18w-Family">海洋正面臨著嚴重的威脅，請與我們攜手合作，保護共同的家園 - 大海。</p>
+                <a href="#declaration"><button class="hero-button">往下了解更多</button></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img class="right-bg" src="./img/Ocean map on the upper right.png" alt="">
+            <img class="left-bg" src="./img/Lower left ocean map.png" alt="">
+            <img class="fish" src="./img/fish.png" alt="">
+            <img class="bigfish" src="./img/bigfish.png" alt="鯨魚">
+        </div>
+    </section>
+
+    <!-- 宣言頁面 -->
+    <section id="declaration">
+        <h1 class="Big-Text-Family">保護藍色星球</h1>
+        <p>通過共同努力<br>才能保護好珍貴的海洋資源</p>
+        <div class="aurora-overlay"></div>
+        <div class="aurora-waves"></div>
+    </section>
+
+    <!-- 相關資訊 -->
+    <section id="information">
+        <div class="titleLine">
+            <div class="title">
+                <h1 class="Big-Text-Family">相關資訊<p class="text-20wb-Family">（relevant information）</p>
+                </h1>
+            </div>
+        </div>
+        <div class="tabs">
+            <button class="tab">文章</button>
+            <button class="tab">新聞</button>
         </div>
         <div class="content">
-            <h2>保護鯨豚家園</h2>
-            <p>了解更多關於保護鯨豚的資訊</p>
+            <div class="left-text">
+                <h4 class="text-32bb-Family">保護海洋，保護地球</h4>
+                <p class="text-24wb-Family">
+                    一個需要更加關注海洋健康的時代。海洋是地球生命的重要組成部分，然而，它們正在面臨前所未有的挑戰。</p>
+                <a href="./video-news.html"><button class="read-more">看更多</button></a>
+            </div>
+            <div class="image-carousel">
+                <button class="carousel-button-left"><img src="./img/left arrow.svg" alt=""></button>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="./img/Article picture.png" alt="Image 1">
+                        <img src="./img/Article picture.png" alt="Image 2">
+                        <img src="./img/Article picture.png" alt="Image 3">
+                        <img src="./img/Article picture.png" alt="Image 4">
+                        <img src="./img/Article picture.png" alt="Image 5">
+                        <img src="./img/Article picture.png" alt="Image 6">
+                        <img src="./img/Article picture.png" alt="Image 7">
+                        <img src="./img/Article picture.png" alt="Image 8">
+                        <img src="./img/Article picture.png" alt="Image 9">
+                        <img src="./img/Article picture.png" alt="Image 10">
+                    </div>
+                </div>
+                <button class="carousel-button-right"><img src="./img/right arrow.svg" alt=""></button>
+            </div>
+        </div>
+    </section>
+    <!-- 海洋汙染 -->
+    <section id="pollute">
+        <div class="titleLine">
+            <div class="title">
+                <h1 class="Big-Text-Family">海洋汙染<p class="text-20wb-Family">（Ocean Pollution）</p>
+                </h1>
+            </div>
+        </div>
+    </section>
+    <!-- 近期活動 -->
+    <section id="activities">
+        <div class="titleLine">
+            <div class="title">
+                <h1 class="Big-Text-Family">近期活動<p class="text-20wb-Family">（recent activities）</p>
+                </h1>
+            </div>
+        </div>
+        <div class="dateBox">
+            <div class="calendar" id="calendar">
+                <div class="calendar-header">
+                    <button id="prevMonth">❮</button>
+                    <span id="calendarMonthYear">2033年05月</span>
+                    <button id="nextMonth">❯</button>
+                </div>
+                <table id="calendarTable">
+                    <thead>
+                        <tr>
+                            <th>日</th>
+                            <th>一</th>
+                            <th>二</th>
+                            <th>三</th>
+                            <th>四</th>
+                            <th>五</th>
+                            <th>六</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Calendar content will be generated here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="activity" id="activity">
+                <div class="activity-item">活動主題<br>活動地點：123<br>報名截止時間：00年00月00日~00年00月00日</div>
+                <div class="activity-item">活動主題<br>活動地點：123<br>報名截止時間：00年00月00日~00年00月00日</div>
+                <div class="activity-item">活動主題<br>活動地點：123<br>報名截止時間：00年00月00日~00年00月00日</div>
+                <a href="#" class="btn-more">查看更多活動資訊</a>
+            </div>
+        </div>
+    </section>
+    <!-- 環保團體 -->
+    <section id="groups">
+        <div class="titleLine">
+            <div class="title">
+                <h1 class="Big-Text-Family">環保團體<p class="text-20wb-Family">（environmental groups）</p>
+                </h1>
+            </div>
+            <img class="jellyfish" src="./img/jellyfish.png" alt="">
+            <img class="card" src="./img/card.png" alt="">
+
+        </div>
+        <div class="groupsBox">
+            <div class="group-item">台灣省船務代理商同會工會聯合會</div>
+            <div class="group-item">中華民國水族類商業同業公會</div>
+            <div class="group-item">花蓮縣海洋生態教育協會</div>
+            <div class="group-item">中華民國自然生態保育協會</div>
+            <a href="#" class="btn-more">查看更多環保團體</a>
         </div>
     </section>
 
-    <section class="section info-section">
-        <h2>捐款選項</h2>
-        <div class="donation-options">
-            <div class="option">
-                <img src="image1.jpg" alt="Option 1">
-                <button>選擇捐款</button>
-            </div>
-            <div class="option">
-                <img src="image2.jpg" alt="Option 2">
-                <button>選擇捐款</button>
-            </div>
-            <div class="option">
-                <img src="image3.jpg" alt="Option 3">
-                <button>選擇捐款</button>
-            </div>
-        </div>
-    </section>
+    <!-- 頁尾 -->
+    <footer>
+        <div id="footer-box">
+            <div id="footer-contant">
+                <h2 class="text-20wb-Family">關於我們</h2>
+                <p class="text-16wf-Family">
+                    面臨著保護地球的重大責任。作為地球上生命的一部分，海洋扮演著至關重要的角色。然而，它們受到塑料污染、氣候變化、過度捕撈等問題的威脅，加入我們，成為海洋保護的一份子，讓我們共同守護著這片藍色的大海。
+                </p>
 
-    <section class="section donation-section">
-        <h2>選擇捐款金額</h2>
-        <div class="form-group">
-            <label for="donation-amount">金額</label>
-            <select id="donation-amount">
-                <option value="small">小額</option>
-                <option value="medium">中額</option>
-                <option value="large">大額</option>
-            </select>
+            </div>
+            <div id="footer-connect">
+                <h2 class="text-20wb-Family">與我們聯繫</h2>
+                <div class="text-16wf-Family">
+                    <p><img src="./img/footer/mail.svg" alt="電子信箱、Email">MarineEcological_Conservation@gmail.com </p>
+                    <p><img src="./img/footer/addr.svg" alt="地址、Addr">100台北市中正區濟南路一段321號 <a class="maptext"
+                            href="">Google-Map</a></p>
+                    <p><img src="./img/footer/phone.svg" alt="聯絡電話、phoneNumber">02-33222777</p>
+                </div>
+            </div>
+            <img class="left-pp" src="./img/footer/Bubbles.svg" alt="">
+            <img class="right-pp" src="./img/footer/Bubbles.svg" alt="">
         </div>
-        <div class="form-group">
-            <label for="donation-type">捐款方式</label>
-            <select id="donation-type">
-                <option value="monthly">月捐</option>
-                <option value="one-time">單次捐款</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="name">姓名</label>
-            <input type="text" id="name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email">
-        </div>
-        <button class="btn-primary">下一步</button>
-    </section>
-
-    <footer class="footer">
-        <p>版權所有 © 2024 守護海洋組織</p>
     </footer>
+
+
+    
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendar = document.getElementById('calendar');
+            const calendarTable = document.getElementById('calendarTable').getElementsByTagName('tbody')[0];
+            const monthYear = document.getElementById('calendarMonthYear');
+            const prevMonth = document.getElementById('prevMonth');
+            const nextMonth = document.getElementById('nextMonth');
+            let currentMonth = new Date().getMonth();
+            let currentYear = new Date().getFullYear();
+
+            const months = ['01月', '02月', '03月', '04月', '05月', '06月', '07月', '08月', '09月', '10月', '11月', '12月'];
+
+            function generateCalendar(month, year) {
+                const firstDay = new Date(year, month).getDay();
+                const daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+                calendarTable.innerHTML = '';
+                monthYear.textContent = `${year}年${months[month]}`;
+
+                let date = 1;
+                for (let i = 0; i < 6; i++) {
+                    const row = document.createElement('tr');
+                    for (let j = 0; j < 7; j++) {
+                        if (i === 0 && j < firstDay) {
+                            const cell = document.createElement('td');
+                            row.appendChild(cell);
+                        } else if (date > daysInMonth) {
+                            break;
+                        } else {
+                            const cell = document.createElement('td');
+                            cell.textContent = date;
+                            cell.addEventListener('click', () => {
+                                const activeCells = calendarTable.querySelectorAll('.active');
+                                activeCells.forEach(cell => cell.classList.remove('active'));
+                                cell.classList.add('active');
+                                // 这里你可以添加代码来根据选定的日期更新活动信息
+                            });
+                            row.appendChild(cell);
+                            date++;
+                        }
+                    }
+                    calendarTable.appendChild(row);
+                }
+            }
+
+            prevMonth.addEventListener('click', () => {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                generateCalendar(currentMonth, currentYear);
+            });
+
+            nextMonth.addEventListener('click', () => {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                generateCalendar(currentMonth, currentYear);
+            });
+
+            generateCalendar(currentMonth, currentYear);
+        });
+    </script>
 </body>
 
 </html>
