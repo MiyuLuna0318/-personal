@@ -17,27 +17,57 @@
     <header>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#" class="text-18w-Family">環保團體</a></li>
+                <li><a href="./groups.html" class="text-18w-Family">環保團體</a></li>
                 <li><a href="./activities.html" class="text-18w-Family">活動公告</a></li>
                 <li><a href="./video-news.html" class="text-18w-Family">相關文章與新聞</a></li>
             </ul>
             <div class="nav-buttons">
-                <button class="btn-primary">訂閱</button>
-                <button class="btn-primary"><a href="./Donate.html">捐款</a></button>
+                <button id="subscribeBtn" class="btn-primary">訂閱</button>
+                <a href="./Donate.html"><button class="btn-primary">捐款</button></a>
                 <a href="./index.html" class="nav-icon"><img src="./img/menuhearder/icon-home.svg" alt="Home"></a>
-                <a href="#" class="nav-icon"><img src="./img/menuhearder/icon-video.svg" alt="Video"></a>
+                <a href="./video-news.html" class="nav-icon"><img src="./img/menuhearder/icon-video.svg"
+                        alt="Video"></a>
             </div>
         </nav>
     </header>
-
-    <section id="information">
-        <div class="titleLine">
-            <div class="title">
-                <h1 class="Big-Text-Family">相關資訊<p class="text-20wb-Family">（relevant information）</p>
-                </h1>
-            </div>
+   <!-- 相關資訊 -->
+   <section id="information">
+    <div class="titleLine">
+        <div class="title">
+            <h1 class="Big-Text-Family">相關資訊<p class="text-20wb-Family">（relevant information）</p>
+            </h1>
         </div>
-    </section>
+    </div>
+    <div class="tabs">
+        <button class="tab">文章</button>
+        <button class="tab">新聞</button>
+    </div>
+    <div class="content">
+        <div class="left-text">
+            <h4 class="text-32bb-Family">保護海洋，保護地球</h4>
+            <p class="text-24wb-Family">
+                一個需要更加關注海洋健康的時代。海洋是地球生命的重要組成部分，然而，它們正在面臨前所未有的挑戰。</p>
+            <a href="./video-news.html"><button class="read-more">看更多</button></a>
+        </div>
+        <div class="image-carousel">
+            <button class="carousel-button-left"><img src="./img/left arrow.svg" alt=""></button>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="./img/Carousel (1).png" alt="">
+                    <img src="./img/Carousel (2).png" alt="">
+                    <img src="./img/Carousel (3).png" alt="">
+                    <img src="./img/Carousel (1).png" alt="">
+                    <img src="./img/Carousel (2).png" alt="">
+                    <img src="./img/Carousel (3).png" alt="">
+                    <img src="./img/Carousel (1).png" alt="">
+                    <img src="./img/Carousel (2).png" alt="">
+                    <img src="./img/Carousel (3).png" alt="">
+                </div>
+            </div>
+            <button class="carousel-button-right"><img src="./img/right arrow.svg" alt=""></button>
+        </div>
+    </div>
+</section>
 
     <footer>
         <div id="footer-box">
@@ -61,6 +91,9 @@
             <img class="right-pp" src="./img/footer/Bubbles.svg" alt="">
         </div>
     </footer>
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>

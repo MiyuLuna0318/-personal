@@ -22,22 +22,92 @@
                 <li><a href="./video-news.html" class="text-18w-Family">相關文章與新聞</a></li>
             </ul>
             <div class="nav-buttons">
-                <button class="btn-primary">訂閱</button>
-                <button class="btn-primary"><a href="./Donate.html">捐款</a></button>
+                <button id="subscribeBtn" class="btn-primary">訂閱</button>
+                <a href="./Donate.html"><button class="btn-primary">捐款</button></a>
                 <a href="./index.html" class="nav-icon"><img src="./img/menuhearder/icon-home.svg" alt="Home"></a>
-                <a href="./video-news.html" class="nav-icon"><img src="./img/menuhearder/icon-video.svg" alt="Video"></a>
+                <a href="./video-news.html" class="nav-icon"><img src="./img/menuhearder/icon-video.svg"
+                        alt="Video"></a>
             </div>
         </nav>
     </header>
 
-    <section id="activities">
-        <div class="titleLine">
-            <div class="title">
-                <h1 class="Big-Text-Family">近期活動<p class="text-20wb-Family">（recent activities）</p>
-                </h1>
+   <!-- 近期活動 -->
+   <section id="activities">
+    <div class="titleLine">
+        <div class="title">
+            <h1 class="Big-Text-Family">近期活動
+                <p class="text-20wb-Family">（recent activities）</p>
+            </h1>
+        </div>
+    </div>
+    <div class="dateBox">
+        <div class="calendar">
+            <div class="calendar-header">
+                <span id="calendar-month-year"></span>
+                <div class="nav-buttons">
+                    <button id="prev-month">&lt;</button>
+                    <button id="next-month">&gt;</button>
+                </div>
+            </div>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>日</th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body">
+                    <!-- 日曆天數將由JavaScript生成 -->
+                </tbody>
+            </table>
+        </div>
+        <div class="events" id="event-container">
+            <a href="./activities.html" class="event">
+                <h3 class="event-title-30pb-Family">海洋保育研討會</h3>
+                <div class="eventAct text-16-Family">
+                    <p>活動目的： </p>
+                    <p> 增進公眾對海洋保育重要性的認識，討論最新的研究成果及保護措施。</p>
+                </div>
+                <div class="eventTime text-12wf-Family">
+                    <span>活動時間：2024年6月15日 09:00 - 12:00</span>
+                    <span>報名截止：2024年6月14日 08:00</span>
+                </div>
+            </a>
+
+            <a href="./activities.html" class="event">
+                <h3 class="event-title-30pb-Family">社區環保日</h3>
+                <div class="eventAct text-16-Family">
+                    <p>活動目的： </p>
+                    <p> 鼓勵社區居民參與環境清潔活動，共同維護居住環境的整潔。</p>
+                </div>
+                <div class="eventTime text-12wf-Family">
+                    <span>活動時間：2024年7月10日 08:00 - 14:00</span>
+                    <span>報名截止：2024年7月9日 07:00</span>
+                </div>
+            </a>
+
+            <a href="./activities.html" class="event">
+                <h3 class="event-title-30pb-Family">綠色生活工作坊</h3>
+                <div class="eventAct text-16-Family">
+                    <p>活動目的： </p>
+                    <p> 教授日常生活中的環保技巧，如垃圾分類、節能減排等，提升生活質量。</p>
+                </div>
+                <div class="eventTime text-12wf-Family">
+                    <span>活動時間：2024年8月5日 13:00 - 17:00</span>
+                    <span>報名截止：2024年8月5日 12:00</span>
+                </div>
+            </a>
+            <div class="more-activities text-20A-Family">
+                <a href="./activities.html"><button>查看當日更多活動</button></a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <div id="footer-box">
@@ -61,6 +131,8 @@
             <img class="right-pp" src="./img/footer/Bubbles.svg" alt="">
         </div>
     </footer>
+    <script src="./script.js"></script>
+
 </body>
 
 </html>

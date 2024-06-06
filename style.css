@@ -150,6 +150,12 @@ main {
     padding-top: 80px;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+
 /* ________________________________________ */
 /* 文字設定 */
 .Big-Text-Family {
@@ -162,6 +168,7 @@ main {
 }
 
 .Big-Text-NoFamily {
+    font-family: Arial;
     font-size: 50px;
     color: var(--white);
     font-weight: bold;
@@ -181,10 +188,28 @@ main {
     font-size: 18px;
     font-weight: bold;
 }
+.text-18-Family {
+    font-family: 'Noto Serif TC';
+    font-size: 18px;
+    font-weight: bold;
+}
 
 .text-16wf-Family {
+    font-family: Arial;
     color: white;
     font-size: 16px;
+    font-weight: lighter;
+}
+.text-16-Family {
+    font-family: Arial;
+    /* color: white; */
+    font-size: 16px;
+    font-weight: bold;
+}
+.text-12wf-Family {
+    font-family: Arial;
+    /* color: white; */
+    font-size: 12px;
     font-weight: lighter;
 }
 
@@ -197,6 +222,13 @@ main {
 
 .text-20wb-Family {
     font-family: 'Noto Serif TC';
+    color: var(--white);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-20A-Family {
+    font-family: Arial;
     color: var(--white);
     font-size: 20px;
     font-weight: bold;
@@ -215,6 +247,13 @@ main {
     font-family: 'Noto Serif TC';
     color: var(--text-smalltitle);
     font-size: 32px;
+    font-weight: bold;
+}
+
+.event-title-30pb-Family {
+    font-family: 'Noto Serif TC';
+    /* color: var(--text-title); */
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -242,8 +281,9 @@ main {
 }
 
 /* __________________________________________________________________________________ */
-/* hearder選單 */
+/* __________hearder選單(開始)____________ */
 header {
+    top: 0;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -300,7 +340,7 @@ header {
     color: var(--white);
 }
 
-.btn-primary a {
+.btn-primary {
     color: var(--white);
     text-decoration: none;
 }
@@ -329,11 +369,20 @@ header {
     background-color: var(--white-rgba7);
 }
 
+.subscribed {
+    /* 按鈕的訂閱後樣式 */
+    background: green;
+}
+
+/* __________hearder選單(結束)____________ */
+
 /* __________________________________________________________________________________ */
-/* index首頁 */
-/* __________首頁(開始)____________ */
+
+/* __________index首頁(開始)____________ */
+
+/* __________封面頁(開始)____________ */
 section {
-    height: 800px;
+    height:100vh;
 }
 
 .hero-section {
@@ -487,6 +536,8 @@ section {
     }
 }
 
+/* __________封面頁(結束)____________ */
+/* __________________________________________________________________________________ */
 /* __________宣言頁面(開始)___________ */
 #declaration {
     display: flex;
@@ -507,7 +558,7 @@ section {
     height: 100%;
     background: radial-gradient(circle, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3));
     background-size: 600% 600%;
-    animation: aurora 60s ease-in-out infinite, wave 60s ease-in-out infinite alternate;
+    /* animation: aurora 60s ease-in-out infinite, wave 60s ease-in-out infinite alternate; */
     mix-blend-mode: overlay;
     pointer-events: none;
 }
@@ -559,32 +610,6 @@ section {
     }
 }
 
-/* #declaration  .aurora-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, rgba(0, 255, 255, 0.5), rgba(255, 0, 255, 0.5));
-    background-size: 200% 200%;
-    animation: aurora 5s ease-in-out infinite;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-}
-
-@keyframes aurora {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-} */
 
 #declaration h1 {
     z-index: 2;
@@ -610,6 +635,7 @@ section .titleLine {
     background-size: 15%;
     width: 100%;
     height: 200px;
+    margin-top: 60px;
 }
 
 section .titleLine .title {
@@ -682,7 +708,8 @@ section .titleLine .title::after {
 
 #information .content .left-text {
     width: 30%;
-    padding: 0 80px;
+    /* padding: 0 80px; */
+    margin: 0 80px;
 }
 
 #information .content .left-text h4 {
@@ -716,10 +743,8 @@ section .titleLine .title::after {
 #information .content .image-carousel {
     position: relative;
     width: 40%;
-    margin: 0 50px;
-    padding: 50px;
-    height: 25vh;
-    width: 40vh;
+    height: 40vh;
+    width: 55vh;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -775,43 +800,287 @@ section .titleLine .title::after {
 /* __________相關資訊(結束)___________ */
 
 /* __________海洋汙染(開始)___________ */
-/* __________海洋汙染(結束)___________ */
-
-/* __________近期活動(開始)___________ */
-/* 样式可以根据需要自行调整 */
-#activities .dateBox {
+/* 卡片样式 */
+.card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
 }
 
-#activities .dateBox .calendar {
-    width: 50%;
-    display: flex;
-    gap: 5px;
-}
-
-#activities .dateBox .activity {
-    width: 50%;
-}
-
-.calendar-cell {
-    width: 18px;
-    height: 18px;
-    padding: 8px;
-    border-radius: 99px;
-    border: 2px solid transparent;
-
-    flex-basis: calc(100% / 7 - 10px);
-    /* 每个单元格宽度 */
-    background-color: #f0f0f0;
+.card {
+    background: rgba(180, 198, 225, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     text-align: center;
+    width: 20%;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgb(139, 173, 225);
+    border: 1px solid white;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.card-image img {
+    width: 85%;
+    margin: 25px auto 0 auto;
+    border-radius: 10px;
+}
+
+.card-title {
+    color: #6a4bad;
+}
+
+.card-description {
+    padding: 0 20px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.5;
+}
+
+.card-button {
+    background: var(--bluePinck);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    animation: all 0.4s;
+}
+
+.card-button:hover {
+    background: linear-gradient(90deg, #66ccff, #d16ee0);
+}
+
+/* 燈箱樣式 */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.lightbox-content {
+    position: relative;
+    margin: 8% auto;
+    padding: 30px;
+    width: 80%;
+    height: 70%;
+    max-height: 600px;
+    max-width: 1000px;
+    background: rgba(0, 0, 0, 0.65);
+    color: var(--white);
+    box-shadow: var(--text-title);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(194, 127, 207, 0.6) 10px 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 15px;
     cursor: pointer;
 }
 
-.calendar-cell:hover {
-    /* background-color: #C75495; */
-    border: 2px solid #C75495;
+.lightbox-image {
+    width: 45%;
+    float: left;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 15px;
+    border-radius: 15px;
+}
+
+
+#lightbox .lightbox-content .lightbox-text {
+    margin: 10px;
+}
+
+#lightbox .lightbox-content .lightbox-text .lightbox-title {
+    color: var(--text-title);
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+#lightbox .lightbox-content .lightbox-text .lightbox-description {
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: .15rem;
+}
+
+/* __________海洋汙染(結束)___________ */
+
+/* __________近期活動(開始)___________ */
+#activities {
+    padding: 50px;
+}
+
+.titleLine {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dateBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 15px;
+}
+
+.calendar {
+    width: 25%;
+    height: 400px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: var(--white-rgba7);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header span {
+    font-size: 20px;
+}
+
+.calendar-header .nav-buttons {
+    display: flex;
+}
+
+.calendar-header .nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th,
+.calendar-table td {
+    width: 10%;
+    padding: 15px;
+    text-align: center;
+}
+
+.calendar-table th {
+    background: #f5f5f5;
+
+}
+
+.calendar-table td {
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.calendar-table td:hover {
+    border: 1px solid #C75495;
+}
+
+.events {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event {
+    padding: 15px;
+    background: var(--white-rgba7);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: all .4s;
+}
+
+.event.hidden {
+    opacity: 0;
+}
+
+.event:hover{
+    background: #8b0000;
+    color: white;
+}
+
+.event .eventAct,
+.event .eventTime {
+    display: flex;
+    flex-flow: column;
+}
+
+.event .eventTime {
+    font-size: 12px;
+}
+
+.event h3 {
+    margin-bottom: 15px;
+}
+
+.event p {
+    margin-bottom: 5px;
+}
+
+.event span {
+    padding: 5px 0;
+}
+
+
+.more-activities {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-activities button {
+    padding: 10px 20px;
+    background: var(--bluePinck);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.more-activities button:hover {
+    background: var(--btn_hover);
 }
 
 /* __________近期活動(結束)___________ */
@@ -829,12 +1098,32 @@ section .titleLine .title::after {
     top: 30px;
     right: 15%;
     width: 130px;
+    animation: jellyfishAnimation 6s infinite;
+    z-index: 2;
 }
 
-#groups .card {
+#groups .fish {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -800px;
+    right: -450px;
+    animation: fishAnimation 6s 1.5s infinite;
+    z-index: -1;
+}
+
+@keyframes jellyfishAnimation {
+    0% {
+        transform: translateY(10px);
+    }
+
+
+    50% {
+        transform: translateY(50px);
+
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
 }
 
 .Big-Text-Family {
@@ -888,22 +1177,49 @@ section .titleLine .title::after {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     margin: 0 10%;
     position: relative;
+    overflow: hidden;
+}
+
+.groupsBox .groupsBox-right {
+    position: absolute;
+    width: 40%;
+    right: 20%;
+    top: -50%;
+    z-index: -1;
+    opacity: .8;
+}
+
+.groupsBox .groupsBox-left {
+    position: absolute;
+    width: 40%;
+    left: -50%;
+    top: -30%;
+    z-index: -1;
+    opacity: .8;
 }
 
 .group-item {
-    width: 80%;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    width: 100%;
+    background: var(--white-rgba7);
+    box-shadow: 3px 3px var(--shadow-black);
+    border-radius: 99px;
     padding: 15px;
     margin-bottom: 10px;
     text-align: center;
     color: #333;
     font-size: 18px;
     cursor: pointer;
+    letter-spacing: .3rem;
+    transition: all .4s;
+}
+
+.group-item:hover {
+    color: var(--white);
+    background-color: var(--btn_hover);
 }
 
 .btn-more {
@@ -912,10 +1228,14 @@ section .titleLine .title::after {
     margin: 20px auto;
     padding: 10px;
     text-align: center;
-    background: #4081ff;
+    background: var(--bluePinck);
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
+}
+
+.btn-more:hover {
+    background: var(--btn_hover);
 }
 
 .groupsBox::before {
@@ -944,7 +1264,7 @@ section .titleLine .title::after {
 
 /* __________環保團體(結束)___________ */
 
-/* __________首頁(結束)____________ */
+/* __________index首頁(結束)____________ */
 
 /* __________________________________________________________________________________ */
 
@@ -992,8 +1312,6 @@ section .titleLine .title::after {
     color: var(--white);
 }
 
-
-
 /* 右手邊 */
 .container {
     background: var(--section_background);
@@ -1007,8 +1325,6 @@ section .titleLine .title::after {
     overflow: hidden;
 }
 
-
-
 /* 捐款方式 */
 .radio-group {
     display: flex;
@@ -1018,13 +1334,13 @@ section .titleLine .title::after {
 
 .radio-group button {
     align-items: center;
-    background: var(--white-rgba7);
     padding: 20px;
     margin: 0 10px 0 0;
     border-radius: 20px;
     cursor: pointer;
     border: none;
     width: 100%;
+    background: var(--white-rgba7);
     box-shadow: 3px 3px var(--shadow-black);
     border: 3px solid transparent;
     transition: all 0.4s;

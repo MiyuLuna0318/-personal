@@ -17,10 +17,11 @@
                 <li><a href="./video-news.html" class="text-18w-Family">相關文章與新聞</a></li>
             </ul>
             <div class="nav-buttons">
-                <button class="btn-primary">訂閱</button>
-                <button class="btn-primary"><a href="./Donate.html">捐款</a></button>
+                <button id="subscribeBtn" class="btn-primary">訂閱</button>
+                <a href="./Donate.html"><button class="btn-primary">捐款</button></a>
                 <a href="./index.html" class="nav-icon"><img src="./img/menuhearder/icon-home.svg" alt="Home"></a>
-                <a href="./video-news.html" class="nav-icon"><img src="./img/menuhearder/icon-video.svg" alt="Video"></a>
+                <a href="./video-news.html" class="nav-icon"><img src="./img/menuhearder/icon-video.svg"
+                        alt="Video"></a>
             </div>
         </nav>
     </header>
@@ -133,28 +134,11 @@
 
     <!-- 按鈕被點擊 -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const buttons = document.querySelectorAll('.radio-group button');
-            buttons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const activeButton = document.querySelector('.radio-group button.clicked');
-                    if (activeButton) {
-                        activeButton.classList.remove('clicked');
-                    }
-                    button.classList.add('clicked');
-                });
-            });
-        });
-
-        document.querySelector('.btn-next').addEventListener('click', function (event) {
-            event.preventDefault();
-            document.getElementById('initialBox').classList.add('hidden');
-            document.getElementById('newFormContent').classList.remove('hidden');
-        });
-
-
-
+       
     </script>
+
+<script src="./script.js"></script>
+
 </body>
 
 
