@@ -188,6 +188,7 @@ a {
     font-size: 18px;
     font-weight: bold;
 }
+
 .text-18-Family {
     font-family: 'Noto Serif TC';
     font-size: 18px;
@@ -200,12 +201,14 @@ a {
     font-size: 16px;
     font-weight: lighter;
 }
+
 .text-16-Family {
     font-family: Arial;
     /* color: white; */
     font-size: 16px;
     font-weight: bold;
 }
+
 .text-12wf-Family {
     font-family: Arial;
     /* color: white; */
@@ -267,7 +270,7 @@ a {
     --btn_hover: linear-gradient(to right, #a95ac9, #e66089);
     /* 文字顏色 */
     --text: #666;
-    --text-smalltitle: #843434;
+    --text-smalltitle: #9ef8fd;
     --text-title: #6b6bdb;
     /* 區塊色 */
     --section_background: rgba(97, 164, 212, 0.5);
@@ -382,7 +385,7 @@ header {
 
 /* __________封面頁(開始)____________ */
 section {
-    height:100vh;
+    height: 100vh;
 }
 
 .hero-section {
@@ -693,7 +696,7 @@ section .titleLine .title::after {
 }
 
 #information .tabs .tab:hover {
-    background: var(--text-smalltitle);
+    background: var(--blue);
     color: var(--white);
 }
 
@@ -1009,10 +1012,11 @@ section .titleLine .title::after {
 .calendar-table td {
     cursor: pointer;
     border: 1px solid transparent;
+    border-radius: 99px;
 }
 
 .calendar-table td:hover {
-    border: 1px solid #C75495;
+    border: 1px solid var(--text-smalltitle);
 }
 
 .events {
@@ -1035,9 +1039,9 @@ section .titleLine .title::after {
     opacity: 0;
 }
 
-.event:hover{
-    background: #8b0000;
-    color: white;
+.event:hover {
+    background: var(--Light-Steel-list);
+    color: var(--white);
 }
 
 .event .eventAct,
@@ -1115,10 +1119,8 @@ section .titleLine .title::after {
         transform: translateY(10px);
     }
 
-
     50% {
         transform: translateY(50px);
-
     }
 
     100% {
@@ -1210,8 +1212,6 @@ section .titleLine .title::after {
     padding: 15px;
     margin-bottom: 10px;
     text-align: center;
-    color: #333;
-    font-size: 18px;
     cursor: pointer;
     letter-spacing: .3rem;
     transition: all .4s;
@@ -1265,7 +1265,6 @@ section .titleLine .title::after {
 /* __________環保團體(結束)___________ */
 
 /* __________index首頁(結束)____________ */
-
 /* __________________________________________________________________________________ */
 
 /* Donate捐款頁面-第一頁:選擇 */
@@ -1614,14 +1613,10 @@ footer #footer-box {
     height: 280px;
 }
 
-footer h2 {
-    margin-bottom: 25px;
-}
-
 footer p {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin: 25px 0;
 }
 
 footer {
@@ -1635,6 +1630,7 @@ footer {
 footer p .maptext {
     margin-left: 50px;
     color: var(--white);
+    text-decoration:underline;
 }
 
 footer p img {
@@ -1648,7 +1644,5 @@ footer #footer-connect {
     margin: 0 auto;
     padding: 0 30px;
 }
-
-
 
 /* __________________________________________________________________________________ */
